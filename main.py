@@ -73,22 +73,8 @@ def main():
 
     while inputPrompt:
         selection = input("What would you like? (espresso/latte/cappuccino)?")
-        if selection == "espresso":
-            print("You selected Espresso Drink")
-            result = check_resource_sufficient(selection)
-            if result:
-                total = process_coins()
-                transaction(total, selection)
-                process_drink(selection)
-        elif selection == "latte":
-            print("You selected Latte Drink")
-            result = check_resource_sufficient(selection)
-            if result:
-                total = process_coins()
-                transaction(total, selection)
-                process_drink(selection)
-        elif selection == "cappuccino":
-            print("You selected Cappuccino Drink")
+        if selection == "espresso" or selection == "latte" or selection == "cappuccino":
+            print("You selected {0} Drink".format(selection))
             result = check_resource_sufficient(selection)
             if result:
                 total = process_coins()
