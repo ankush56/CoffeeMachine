@@ -1,3 +1,5 @@
+# Coffee Machine
+# Test
 def main():
     MENU = {
         "espresso": {
@@ -98,6 +100,7 @@ def main():
             print("Milk: {} ml".format(currentResource["milk"]))
             print("Coffee: {} g".format(currentResource["coffee"]))
             print("Money: ${}".format(currentResource["money"]))
+
         elif selection == "off":
             print("Turning machine off")
             quit()
